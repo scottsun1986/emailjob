@@ -10,7 +10,7 @@ import java.io.FileNotFoundException;
 import java.sql.SQLException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
- branch 2
+
 public class BeanGetter {
     private static ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-mybatis.xml");
 
