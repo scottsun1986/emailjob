@@ -11,7 +11,7 @@ import java.sql.SQLException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-
+whits is .sss
 public class BeanGetter {
     private static ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-mybatis.xml");
 
@@ -27,6 +27,7 @@ public class BeanGetter {
             return true;
         } else {
             return false;
+
         }
     }
 
