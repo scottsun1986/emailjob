@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fun4g.emailjob.iDao.TJobRelaMapper" >
+  <resultMap id="BaseResultMap" type="com.fun4g.emailjob.model.TJobRela" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="job_id" property="jobId" jdbcType="INTEGER" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="is_distributor" property="isDistributor" jdbcType="BIT" />
+    <result column="has_distributed" property="hasDistributed" jdbcType="BIT" />
+    <result column="extract_code" property="extractCode" jdbcType="VARCHAR" />
+    <result column="has_confirmed" property="hasConfirmed" jdbcType="BIT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, job_id, email, is_distributor, has_distributed, extract_code, has_confirmed
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_job_rela
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_job_rela
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.fun4g.emailjob.model.TJobRela" >
+    insert into t_job_rela (id, job_id, email, 
+      is_distributor, has_distributed, extract_code, 
+      has_confirmed)
+    values (#{id,jdbcType=INTEGER}, #{jobId,jdbcType=INTEGER}, #{email,jdbcType=VARCHAR}, 
+      #{isDistributor,jdbcType=BIT}, #{hasDistributed,jdbcType=BIT}, #{extractCode,jdbcType=VARCHAR}, 
+      #{hasConfirmed,jdbcType=BIT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.fun4g.emailjob.model.TJobRela" >
+    insert into t_job_rela
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="jobId != null" >
+        job_id,
+      </if>
+      <if test="email != null" >
+        email,
+      </if>
+      <if test="isDistributor != null" >
+        is_distributor,
+      </if>
+      <if test="hasDistributed != null" >
+        has_distributed,
+      </if>
+      <if test="extractCode != null" >
+        extract_code,
+      </if>
+      <if test="hasConfirmed != null" >
+        has_confirmed,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="jobId != null" >
+        #{jobId,jdbcType=INTEGER},
+      </if>
+      <if test="email != null" >
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="isDistributor != null" >
+        #{isDistributor,jdbcType=BIT},
+      </if>
+      <if test="hasDistributed != null" >
+        #{hasDistributed,jdbcType=BIT},
+      </if>
+      <if test="extractCode != null" >
+        #{extractCode,jdbcType=VARCHAR},
+      </if>
+      <if test="hasConfirmed != null" >
+        #{hasConfirmed,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.fun4g.emailjob.model.TJobRela" >
+    update t_job_rela
+    <set >
+      <if test="jobId != null" >
+        job_id = #{jobId,jdbcType=INTEGER},
+      </if>
+      <if test="email != null" >
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="isDistributor != null" >
+        is_distributor = #{isDistributor,jdbcType=BIT},
+      </if>
+      <if test="hasDistributed != null" >
+        has_distributed = #{hasDistributed,jdbcType=BIT},
+      </if>
+      <if test="extractCode != null" >
+        extract_code = #{extractCode,jdbcType=VARCHAR},
+      </if>
+      <if test="hasConfirmed != null" >
+        has_confirmed = #{hasConfirmed,jdbcType=BIT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.fun4g.emailjob.model.TJobRela" >
+    update t_job_rela
+    set job_id = #{jobId,jdbcType=INTEGER},
+      email = #{email,jdbcType=VARCHAR},
+      is_distributor = #{isDistributor,jdbcType=BIT},
+      has_distributed = #{hasDistributed,jdbcType=BIT},
+      extract_code = #{extractCode,jdbcType=VARCHAR},
+      has_confirmed = #{hasConfirmed,jdbcType=BIT}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

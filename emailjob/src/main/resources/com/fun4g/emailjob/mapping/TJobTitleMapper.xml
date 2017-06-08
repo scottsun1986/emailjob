@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fun4g.emailjob.iDao.TJobTitleMapper" >
+  <resultMap id="BaseResultMap" type="com.fun4g.emailjob.model.TJobTitle" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="job_id" property="jobId" jdbcType="INTEGER" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="title2" property="title2" jdbcType="VARCHAR" />
+    <result column="title3" property="title3" jdbcType="VARCHAR" />
+    <result column="title4" property="title4" jdbcType="VARCHAR" />
+    <result column="title5" property="title5" jdbcType="VARCHAR" />
+    <result column="title6" property="title6" jdbcType="VARCHAR" />
+    <result column="title7" property="title7" jdbcType="VARCHAR" />
+    <result column="title8" property="title8" jdbcType="VARCHAR" />
+    <result column="title9" property="title9" jdbcType="VARCHAR" />
+    <result column="title10" property="title10" jdbcType="VARCHAR" />
+    <result column="title11" property="title11" jdbcType="VARCHAR" />
+    <result column="title12" property="title12" jdbcType="VARCHAR" />
+    <result column="title13" property="title13" jdbcType="VARCHAR" />
+    <result column="title14" property="title14" jdbcType="VARCHAR" />
+    <result column="title15" property="title15" jdbcType="VARCHAR" />
+    <result column="title16" property="title16" jdbcType="VARCHAR" />
+    <result column="title17" property="title17" jdbcType="VARCHAR" />
+    <result column="title18" property="title18" jdbcType="VARCHAR" />
+    <result column="title19" property="title19" jdbcType="VARCHAR" />
+    <result column="title20" property="title20" jdbcType="VARCHAR" />
+    <result column="title21" property="title21" jdbcType="VARCHAR" />
+    <result column="title22" property="title22" jdbcType="VARCHAR" />
+    <result column="title23" property="title23" jdbcType="VARCHAR" />
+    <result column="title24" property="title24" jdbcType="VARCHAR" />
+    <result column="title25" property="title25" jdbcType="VARCHAR" />
+    <result column="title26" property="title26" jdbcType="VARCHAR" />
+    <result column="title27" property="title27" jdbcType="VARCHAR" />
+    <result column="title28" property="title28" jdbcType="VARCHAR" />
+    <result column="title29" property="title29" jdbcType="VARCHAR" />
+    <result column="title30" property="title30" jdbcType="VARCHAR" />
+    <result column="title31" property="title31" jdbcType="VARCHAR" />
+    <result column="title32" property="title32" jdbcType="VARCHAR" />
+    <result column="title33" property="title33" jdbcType="VARCHAR" />
+    <result column="title34" property="title34" jdbcType="VARCHAR" />
+    <result column="title35" property="title35" jdbcType="VARCHAR" />
+    <result column="title36" property="title36" jdbcType="VARCHAR" />
+    <result column="title37" property="title37" jdbcType="VARCHAR" />
+    <result column="title38" property="title38" jdbcType="VARCHAR" />
+    <result column="title39" property="title39" jdbcType="VARCHAR" />
+    <result column="title40" property="title40" jdbcType="VARCHAR" />
+    <result column="title41" property="title41" jdbcType="VARCHAR" />
+    <result column="title42" property="title42" jdbcType="VARCHAR" />
+    <result column="title43" property="title43" jdbcType="VARCHAR" />
+    <result column="title44" property="title44" jdbcType="VARCHAR" />
+    <result column="title45" property="title45" jdbcType="VARCHAR" />
+    <result column="title46" property="title46" jdbcType="VARCHAR" />
+    <result column="title47" property="title47" jdbcType="VARCHAR" />
+    <result column="title48" property="title48" jdbcType="VARCHAR" />
+    <result column="title49" property="title49" jdbcType="VARCHAR" />
+    <result column="title50" property="title50" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, job_id, email, title2, title3, title4, title5, title6, title7, title8, title9, 
+    title10, title11, title12, title13, title14, title15, title16, title17, title18, 
+    title19, title20, title21, title22, title23, title24, title25, title26, title27, 
+    title28, title29, title30, title31, title32, title33, title34, title35, title36, 
+    title37, title38, title39, title40, title41, title42, title43, title44, title45, 
+    title46, title47, title48, title49, title50
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_job_title
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_job_title
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.fun4g.emailjob.model.TJobTitle" >
+    insert into t_job_title (id, job_id, email, 
+      title2, title3, title4, 
+      title5, title6, title7, 
+      title8, title9, title10, 
+      title11, title12, title13, 
+      title14, title15, title16, 
+      title17, title18, title19, 
+      title20, title21, title22, 
+      title23, title24, title25, 
+      title26, title27, title28, 
+      title29, title30, title31, 
+      title32, title33, title34, 
+      title35, title36, title37, 
+      title38, title39, title40, 
+      title41, title42, title43, 
+      title44, title45, title46, 
+      title47, title48, title49, 
+      title50)
+    values (#{id,jdbcType=INTEGER}, #{jobId,jdbcType=INTEGER}, #{email,jdbcType=VARCHAR}, 
+      #{title2,jdbcType=VARCHAR}, #{title3,jdbcType=VARCHAR}, #{title4,jdbcType=VARCHAR}, 
+      #{title5,jdbcType=VARCHAR}, #{title6,jdbcType=VARCHAR}, #{title7,jdbcType=VARCHAR}, 
+      #{title8,jdbcType=VARCHAR}, #{title9,jdbcType=VARCHAR}, #{title10,jdbcType=VARCHAR}, 
+      #{title11,jdbcType=VARCHAR}, #{title12,jdbcType=VARCHAR}, #{title13,jdbcType=VARCHAR}, 
+      #{title14,jdbcType=VARCHAR}, #{title15,jdbcType=VARCHAR}, #{title16,jdbcType=VARCHAR}, 
+      #{title17,jdbcType=VARCHAR}, #{title18,jdbcType=VARCHAR}, #{title19,jdbcType=VARCHAR}, 
+      #{title20,jdbcType=VARCHAR}, #{title21,jdbcType=VARCHAR}, #{title22,jdbcType=VARCHAR}, 
+      #{title23,jdbcType=VARCHAR}, #{title24,jdbcType=VARCHAR}, #{title25,jdbcType=VARCHAR}, 
+      #{title26,jdbcType=VARCHAR}, #{title27,jdbcType=VARCHAR}, #{title28,jdbcType=VARCHAR}, 
+      #{title29,jdbcType=VARCHAR}, #{title30,jdbcType=VARCHAR}, #{title31,jdbcType=VARCHAR}, 
+      #{title32,jdbcType=VARCHAR}, #{title33,jdbcType=VARCHAR}, #{title34,jdbcType=VARCHAR}, 
+      #{title35,jdbcType=VARCHAR}, #{title36,jdbcType=VARCHAR}, #{title37,jdbcType=VARCHAR}, 
+      #{title38,jdbcType=VARCHAR}, #{title39,jdbcType=VARCHAR}, #{title40,jdbcType=VARCHAR}, 
+      #{title41,jdbcType=VARCHAR}, #{title42,jdbcType=VARCHAR}, #{title43,jdbcType=VARCHAR}, 
+      #{title44,jdbcType=VARCHAR}, #{title45,jdbcType=VARCHAR}, #{title46,jdbcType=VARCHAR}, 
+      #{title47,jdbcType=VARCHAR}, #{title48,jdbcType=VARCHAR}, #{title49,jdbcType=VARCHAR}, 
+      #{title50,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.fun4g.emailjob.model.TJobTitle" >
+    insert into t_job_title
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="jobId != null" >
+        job_id,
+      </if>
+      <if test="email != null" >
+        email,
+      </if>
+      <if test="title2 != null" >
+        title2,
+      </if>
+      <if test="title3 != null" >
+        title3,
+      </if>
+      <if test="title4 != null" >
+        title4,
+      </if>
+      <if test="title5 != null" >
+        title5,
+      </if>
+      <if test="title6 != null" >
+        title6,
+      </if>
+      <if test="title7 != null" >
+        title7,
+      </if>
+      <if test="title8 != null" >
+        title8,
+      </if>
+      <if test="title9 != null" >
+        title9,
+      </if>
+      <if test="title10 != null" >
+        title10,
+      </if>
+      <if test="title11 != null" >
+        title11,
+      </if>
+      <if test="title12 != null" >
+        title12,
+      </if>
+      <if test="title13 != null" >
+        title13,
+      </if>
+      <if test="title14 != null" >
+        title14,
+      </if>
+      <if test="title15 != null" >
+        title15,
+      </if>
+      <if test="title16 != null" >
+        title16,
+      </if>
+      <if test="title17 != null" >
+        title17,
+      </if>
+      <if test="title18 != null" >
+        title18,
+      </if>
+      <if test="title19 != null" >
+        title19,
+      </if>
+      <if test="title20 != null" >
+        title20,
+      </if>
+      <if test="title21 != null" >
+        title21,
+      </if>
+      <if test="title22 != null" >
+        title22,
+      </if>
+      <if test="title23 != null" >
+        title23,
+      </if>
+      <if test="title24 != null" >
+        title24,
+      </if>
+      <if test="title25 != null" >
+        title25,
+      </if>
+      <if test="title26 != null" >
+        title26,
+      </if>
+      <if test="title27 != null" >
+        title27,
+      </if>
+      <if test="title28 != null" >
+        title28,
+      </if>
+      <if test="title29 != null" >
+        title29,
+      </if>
+      <if test="title30 != null" >
+        title30,
+      </if>
+      <if test="title31 != null" >
+        title31,
+      </if>
+      <if test="title32 != null" >
+        title32,
+      </if>
+      <if test="title33 != null" >
+        title33,
+      </if>
+      <if test="title34 != null" >
+        title34,
+      </if>
+      <if test="title35 != null" >
+        title35,
+      </if>
+      <if test="title36 != null" >
+        title36,
+      </if>
+      <if test="title37 != null" >
+        title37,
+      </if>
+      <if test="title38 != null" >
+        title38,
+      </if>
+      <if test="title39 != null" >
+        title39,
+      </if>
+      <if test="title40 != null" >
+        title40,
+      </if>
+      <if test="title41 != null" >
+        title41,
+      </if>
+      <if test="title42 != null" >
+        title42,
+      </if>
+      <if test="title43 != null" >
+        title43,
+      </if>
+      <if test="title44 != null" >
+        title44,
+      </if>
+      <if test="title45 != null" >
+        title45,
+      </if>
+      <if test="title46 != null" >
+        title46,
+      </if>
+      <if test="title47 != null" >
+        title47,
+      </if>
+      <if test="title48 != null" >
+        title48,
+      </if>
+      <if test="title49 != null" >
+        title49,
+      </if>
+      <if test="title50 != null" >
+        title50,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="jobId != null" >
+        #{jobId,jdbcType=INTEGER},
+      </if>
+      <if test="email != null" >
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="title2 != null" >
+        #{title2,jdbcType=VARCHAR},
+      </if>
+      <if test="title3 != null" >
+        #{title3,jdbcType=VARCHAR},
+      </if>
+      <if test="title4 != null" >
+        #{title4,jdbcType=VARCHAR},
+      </if>
+      <if test="title5 != null" >
+        #{title5,jdbcType=VARCHAR},
+      </if>
+      <if test="title6 != null" >
+        #{title6,jdbcType=VARCHAR},
+      </if>
+      <if test="title7 != null" >
+        #{title7,jdbcType=VARCHAR},
+      </if>
+      <if test="title8 != null" >
+        #{title8,jdbcType=VARCHAR},
+      </if>
+      <if test="title9 != null" >
+        #{title9,jdbcType=VARCHAR},
+      </if>
+      <if test="title10 != null" >
+        #{title10,jdbcType=VARCHAR},
+      </if>
+      <if test="title11 != null" >
+        #{title11,jdbcType=VARCHAR},
+      </if>
+      <if test="title12 != null" >
+        #{title12,jdbcType=VARCHAR},
+      </if>
+      <if test="title13 != null" >
+        #{title13,jdbcType=VARCHAR},
+      </if>
+      <if test="title14 != null" >
+        #{title14,jdbcType=VARCHAR},
+      </if>
+      <if test="title15 != null" >
+        #{title15,jdbcType=VARCHAR},
+      </if>
+      <if test="title16 != null" >
+        #{title16,jdbcType=VARCHAR},
+      </if>
+      <if test="title17 != null" >
+        #{title17,jdbcType=VARCHAR},
+      </if>
+      <if test="title18 != null" >
+        #{title18,jdbcType=VARCHAR},
+      </if>
+      <if test="title19 != null" >
+        #{title19,jdbcType=VARCHAR},
+      </if>
+      <if test="title20 != null" >
+        #{title20,jdbcType=VARCHAR},
+      </if>
+      <if test="title21 != null" >
+        #{title21,jdbcType=VARCHAR},
+      </if>
+      <if test="title22 != null" >
+        #{title22,jdbcType=VARCHAR},
+      </if>
+      <if test="title23 != null" >
+        #{title23,jdbcType=VARCHAR},
+      </if>
+      <if test="title24 != null" >
+        #{title24,jdbcType=VARCHAR},
+      </if>
+      <if test="title25 != null" >
+        #{title25,jdbcType=VARCHAR},
+      </if>
+      <if test="title26 != null" >
+        #{title26,jdbcType=VARCHAR},
+      </if>
+      <if test="title27 != null" >
+        #{title27,jdbcType=VARCHAR},
+      </if>
+      <if test="title28 != null" >
+        #{title28,jdbcType=VARCHAR},
+      </if>
+      <if test="title29 != null" >
+        #{title29,jdbcType=VARCHAR},
+      </if>
+      <if test="title30 != null" >
+        #{title30,jdbcType=VARCHAR},
+      </if>
+      <if test="title31 != null" >
+        #{title31,jdbcType=VARCHAR},
+      </if>
+      <if test="title32 != null" >
+        #{title32,jdbcType=VARCHAR},
+      </if>
+      <if test="title33 != null" >
+        #{title33,jdbcType=VARCHAR},
+      </if>
+      <if test="title34 != null" >
+        #{title34,jdbcType=VARCHAR},
+      </if>
+      <if test="title35 != null" >
+        #{title35,jdbcType=VARCHAR},
+      </if>
+      <if test="title36 != null" >
+        #{title36,jdbcType=VARCHAR},
+      </if>
+      <if test="title37 != null" >
+        #{title37,jdbcType=VARCHAR},
+      </if>
+      <if test="title38 != null" >
+        #{title38,jdbcType=VARCHAR},
+      </if>
+      <if test="title39 != null" >
+        #{title39,jdbcType=VARCHAR},
+      </if>
+      <if test="title40 != null" >
+        #{title40,jdbcType=VARCHAR},
+      </if>
+      <if test="title41 != null" >
+        #{title41,jdbcType=VARCHAR},
+      </if>
+      <if test="title42 != null" >
+        #{title42,jdbcType=VARCHAR},
+      </if>
+      <if test="title43 != null" >
+        #{title43,jdbcType=VARCHAR},
+      </if>
+      <if test="title44 != null" >
+        #{title44,jdbcType=VARCHAR},
+      </if>
+      <if test="title45 != null" >
+        #{title45,jdbcType=VARCHAR},
+      </if>
+      <if test="title46 != null" >
+        #{title46,jdbcType=VARCHAR},
+      </if>
+      <if test="title47 != null" >
+        #{title47,jdbcType=VARCHAR},
+      </if>
+      <if test="title48 != null" >
+        #{title48,jdbcType=VARCHAR},
+      </if>
+      <if test="title49 != null" >
+        #{title49,jdbcType=VARCHAR},
+      </if>
+      <if test="title50 != null" >
+        #{title50,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.fun4g.emailjob.model.TJobTitle" >
+    update t_job_title
+    <set >
+      <if test="jobId != null" >
+        job_id = #{jobId,jdbcType=INTEGER},
+      </if>
+      <if test="email != null" >
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="title2 != null" >
+        title2 = #{title2,jdbcType=VARCHAR},
+      </if>
+      <if test="title3 != null" >
+        title3 = #{title3,jdbcType=VARCHAR},
+      </if>
+      <if test="title4 != null" >
+        title4 = #{title4,jdbcType=VARCHAR},
+      </if>
+      <if test="title5 != null" >
+        title5 = #{title5,jdbcType=VARCHAR},
+      </if>
+      <if test="title6 != null" >
+        title6 = #{title6,jdbcType=VARCHAR},
+      </if>
+      <if test="title7 != null" >
+        title7 = #{title7,jdbcType=VARCHAR},
+      </if>
+      <if test="title8 != null" >
+        title8 = #{title8,jdbcType=VARCHAR},
+      </if>
+      <if test="title9 != null" >
+        title9 = #{title9,jdbcType=VARCHAR},
+      </if>
+      <if test="title10 != null" >
+        title10 = #{title10,jdbcType=VARCHAR},
+      </if>
+      <if test="title11 != null" >
+        title11 = #{title11,jdbcType=VARCHAR},
+      </if>
+      <if test="title12 != null" >
+        title12 = #{title12,jdbcType=VARCHAR},
+      </if>
+      <if test="title13 != null" >
+        title13 = #{title13,jdbcType=VARCHAR},
+      </if>
+      <if test="title14 != null" >
+        title14 = #{title14,jdbcType=VARCHAR},
+      </if>
+      <if test="title15 != null" >
+        title15 = #{title15,jdbcType=VARCHAR},
+      </if>
+      <if test="title16 != null" >
+        title16 = #{title16,jdbcType=VARCHAR},
+      </if>
+      <if test="title17 != null" >
+        title17 = #{title17,jdbcType=VARCHAR},
+      </if>
+      <if test="title18 != null" >
+        title18 = #{title18,jdbcType=VARCHAR},
+      </if>
+      <if test="title19 != null" >
+        title19 = #{title19,jdbcType=VARCHAR},
+      </if>
+      <if test="title20 != null" >
+        title20 = #{title20,jdbcType=VARCHAR},
+      </if>
+      <if test="title21 != null" >
+        title21 = #{title21,jdbcType=VARCHAR},
+      </if>
+      <if test="title22 != null" >
+        title22 = #{title22,jdbcType=VARCHAR},
+      </if>
+      <if test="title23 != null" >
+        title23 = #{title23,jdbcType=VARCHAR},
+      </if>
+      <if test="title24 != null" >
+        title24 = #{title24,jdbcType=VARCHAR},
+      </if>
+      <if test="title25 != null" >
+        title25 = #{title25,jdbcType=VARCHAR},
+      </if>
+      <if test="title26 != null" >
+        title26 = #{title26,jdbcType=VARCHAR},
+      </if>
+      <if test="title27 != null" >
+        title27 = #{title27,jdbcType=VARCHAR},
+      </if>
+      <if test="title28 != null" >
+        title28 = #{title28,jdbcType=VARCHAR},
+      </if>
+      <if test="title29 != null" >
+        title29 = #{title29,jdbcType=VARCHAR},
+      </if>
+      <if test="title30 != null" >
+        title30 = #{title30,jdbcType=VARCHAR},
+      </if>
+      <if test="title31 != null" >
+        title31 = #{title31,jdbcType=VARCHAR},
+      </if>
+      <if test="title32 != null" >
+        title32 = #{title32,jdbcType=VARCHAR},
+      </if>
+      <if test="title33 != null" >
+        title33 = #{title33,jdbcType=VARCHAR},
+      </if>
+      <if test="title34 != null" >
+        title34 = #{title34,jdbcType=VARCHAR},
+      </if>
+      <if test="title35 != null" >
+        title35 = #{title35,jdbcType=VARCHAR},
+      </if>
+      <if test="title36 != null" >
+        title36 = #{title36,jdbcType=VARCHAR},
+      </if>
+      <if test="title37 != null" >
+        title37 = #{title37,jdbcType=VARCHAR},
+      </if>
+      <if test="title38 != null" >
+        title38 = #{title38,jdbcType=VARCHAR},
+      </if>
+      <if test="title39 != null" >
+        title39 = #{title39,jdbcType=VARCHAR},
+      </if>
+      <if test="title40 != null" >
+        title40 = #{title40,jdbcType=VARCHAR},
+      </if>
+      <if test="title41 != null" >
+        title41 = #{title41,jdbcType=VARCHAR},
+      </if>
+      <if test="title42 != null" >
+        title42 = #{title42,jdbcType=VARCHAR},
+      </if>
+      <if test="title43 != null" >
+        title43 = #{title43,jdbcType=VARCHAR},
+      </if>
+      <if test="title44 != null" >
+        title44 = #{title44,jdbcType=VARCHAR},
+      </if>
+      <if test="title45 != null" >
+        title45 = #{title45,jdbcType=VARCHAR},
+      </if>
+      <if test="title46 != null" >
+        title46 = #{title46,jdbcType=VARCHAR},
+      </if>
+      <if test="title47 != null" >
+        title47 = #{title47,jdbcType=VARCHAR},
+      </if>
+      <if test="title48 != null" >
+        title48 = #{title48,jdbcType=VARCHAR},
+      </if>
+      <if test="title49 != null" >
+        title49 = #{title49,jdbcType=VARCHAR},
+      </if>
+      <if test="title50 != null" >
+        title50 = #{title50,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.fun4g.emailjob.model.TJobTitle" >
+    update t_job_title
+    set job_id = #{jobId,jdbcType=INTEGER},
+      email = #{email,jdbcType=VARCHAR},
+      title2 = #{title2,jdbcType=VARCHAR},
+      title3 = #{title3,jdbcType=VARCHAR},
+      title4 = #{title4,jdbcType=VARCHAR},
+      title5 = #{title5,jdbcType=VARCHAR},
+      title6 = #{title6,jdbcType=VARCHAR},
+      title7 = #{title7,jdbcType=VARCHAR},
+      title8 = #{title8,jdbcType=VARCHAR},
+      title9 = #{title9,jdbcType=VARCHAR},
+      title10 = #{title10,jdbcType=VARCHAR},
+      title11 = #{title11,jdbcType=VARCHAR},
+      title12 = #{title12,jdbcType=VARCHAR},
+      title13 = #{title13,jdbcType=VARCHAR},
+      title14 = #{title14,jdbcType=VARCHAR},
+      title15 = #{title15,jdbcType=VARCHAR},
+      title16 = #{title16,jdbcType=VARCHAR},
+      title17 = #{title17,jdbcType=VARCHAR},
+      title18 = #{title18,jdbcType=VARCHAR},
+      title19 = #{title19,jdbcType=VARCHAR},
+      title20 = #{title20,jdbcType=VARCHAR},
+      title21 = #{title21,jdbcType=VARCHAR},
+      title22 = #{title22,jdbcType=VARCHAR},
+      title23 = #{title23,jdbcType=VARCHAR},
+      title24 = #{title24,jdbcType=VARCHAR},
+      title25 = #{title25,jdbcType=VARCHAR},
+      title26 = #{title26,jdbcType=VARCHAR},
+      title27 = #{title27,jdbcType=VARCHAR},
+      title28 = #{title28,jdbcType=VARCHAR},
+      title29 = #{title29,jdbcType=VARCHAR},
+      title30 = #{title30,jdbcType=VARCHAR},
+      title31 = #{title31,jdbcType=VARCHAR},
+      title32 = #{title32,jdbcType=VARCHAR},
+      title33 = #{title33,jdbcType=VARCHAR},
+      title34 = #{title34,jdbcType=VARCHAR},
+      title35 = #{title35,jdbcType=VARCHAR},
+      title36 = #{title36,jdbcType=VARCHAR},
+      title37 = #{title37,jdbcType=VARCHAR},
+      title38 = #{title38,jdbcType=VARCHAR},
+      title39 = #{title39,jdbcType=VARCHAR},
+      title40 = #{title40,jdbcType=VARCHAR},
+      title41 = #{title41,jdbcType=VARCHAR},
+      title42 = #{title42,jdbcType=VARCHAR},
+      title43 = #{title43,jdbcType=VARCHAR},
+      title44 = #{title44,jdbcType=VARCHAR},
+      title45 = #{title45,jdbcType=VARCHAR},
+      title46 = #{title46,jdbcType=VARCHAR},
+      title47 = #{title47,jdbcType=VARCHAR},
+      title48 = #{title48,jdbcType=VARCHAR},
+      title49 = #{title49,jdbcType=VARCHAR},
+      title50 = #{title50,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

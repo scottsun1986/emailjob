@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fun4g.emailjob.iDao.TJobContentMapper" >
+  <resultMap id="BaseResultMap" type="com.fun4g.emailjob.model.TJobContent" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="job_id" property="jobId" jdbcType="INTEGER" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="content2" property="content2" jdbcType="VARCHAR" />
+    <result column="content3" property="content3" jdbcType="VARCHAR" />
+    <result column="content4" property="content4" jdbcType="VARCHAR" />
+    <result column="content5" property="content5" jdbcType="VARCHAR" />
+    <result column="content6" property="content6" jdbcType="VARCHAR" />
+    <result column="content7" property="content7" jdbcType="VARCHAR" />
+    <result column="content8" property="content8" jdbcType="VARCHAR" />
+    <result column="content9" property="content9" jdbcType="VARCHAR" />
+    <result column="content10" property="content10" jdbcType="VARCHAR" />
+    <result column="content11" property="content11" jdbcType="VARCHAR" />
+    <result column="content12" property="content12" jdbcType="VARCHAR" />
+    <result column="content13" property="content13" jdbcType="VARCHAR" />
+    <result column="content14" property="content14" jdbcType="VARCHAR" />
+    <result column="content15" property="content15" jdbcType="VARCHAR" />
+    <result column="content16" property="content16" jdbcType="VARCHAR" />
+    <result column="content17" property="content17" jdbcType="VARCHAR" />
+    <result column="content18" property="content18" jdbcType="VARCHAR" />
+    <result column="content19" property="content19" jdbcType="VARCHAR" />
+    <result column="content20" property="content20" jdbcType="VARCHAR" />
+    <result column="content21" property="content21" jdbcType="VARCHAR" />
+    <result column="content22" property="content22" jdbcType="VARCHAR" />
+    <result column="content23" property="content23" jdbcType="VARCHAR" />
+    <result column="content24" property="content24" jdbcType="VARCHAR" />
+    <result column="content25" property="content25" jdbcType="VARCHAR" />
+    <result column="content26" property="content26" jdbcType="VARCHAR" />
+    <result column="content27" property="content27" jdbcType="VARCHAR" />
+    <result column="content28" property="content28" jdbcType="VARCHAR" />
+    <result column="content29" property="content29" jdbcType="VARCHAR" />
+    <result column="content30" property="content30" jdbcType="VARCHAR" />
+    <result column="content31" property="content31" jdbcType="VARCHAR" />
+    <result column="content32" property="content32" jdbcType="VARCHAR" />
+    <result column="content33" property="content33" jdbcType="VARCHAR" />
+    <result column="content34" property="content34" jdbcType="VARCHAR" />
+    <result column="content35" property="content35" jdbcType="VARCHAR" />
+    <result column="content36" property="content36" jdbcType="VARCHAR" />
+    <result column="content37" property="content37" jdbcType="VARCHAR" />
+    <result column="content38" property="content38" jdbcType="VARCHAR" />
+    <result column="content39" property="content39" jdbcType="VARCHAR" />
+    <result column="content40" property="content40" jdbcType="VARCHAR" />
+    <result column="content41" property="content41" jdbcType="VARCHAR" />
+    <result column="content42" property="content42" jdbcType="VARCHAR" />
+    <result column="content43" property="content43" jdbcType="VARCHAR" />
+    <result column="content44" property="content44" jdbcType="VARCHAR" />
+    <result column="content45" property="content45" jdbcType="VARCHAR" />
+    <result column="content46" property="content46" jdbcType="VARCHAR" />
+    <result column="content47" property="content47" jdbcType="VARCHAR" />
+    <result column="content48" property="content48" jdbcType="VARCHAR" />
+    <result column="content49" property="content49" jdbcType="VARCHAR" />
+    <result column="content50" property="content50" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, job_id, email, content2, content3, content4, content5, content6, content7, content8, 
+    content9, content10, content11, content12, content13, content14, content15, content16, 
+    content17, content18, content19, content20, content21, content22, content23, content24, 
+    content25, content26, content27, content28, content29, content30, content31, content32, 
+    content33, content34, content35, content36, content37, content38, content39, content40, 
+    content41, content42, content43, content44, content45, content46, content47, content48, 
+    content49, content50
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_job_content
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_job_content
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.fun4g.emailjob.model.TJobContent" >
+    insert into t_job_content (id, job_id, email, 
+      content2, content3, content4, 
+      content5, content6, content7, 
+      content8, content9, content10, 
+      content11, content12, content13, 
+      content14, content15, content16, 
+      content17, content18, content19, 
+      content20, content21, content22, 
+      content23, content24, content25, 
+      content26, content27, content28, 
+      content29, content30, content31, 
+      content32, content33, content34, 
+      content35, content36, content37, 
+      content38, content39, content40, 
+      content41, content42, content43, 
+      content44, content45, content46, 
+      content47, content48, content49, 
+      content50)
+    values (#{id,jdbcType=INTEGER}, #{jobId,jdbcType=INTEGER}, #{email,jdbcType=VARCHAR}, 
+      #{content2,jdbcType=VARCHAR}, #{content3,jdbcType=VARCHAR}, #{content4,jdbcType=VARCHAR}, 
+      #{content5,jdbcType=VARCHAR}, #{content6,jdbcType=VARCHAR}, #{content7,jdbcType=VARCHAR}, 
+      #{content8,jdbcType=VARCHAR}, #{content9,jdbcType=VARCHAR}, #{content10,jdbcType=VARCHAR}, 
+      #{content11,jdbcType=VARCHAR}, #{content12,jdbcType=VARCHAR}, #{content13,jdbcType=VARCHAR}, 
+      #{content14,jdbcType=VARCHAR}, #{content15,jdbcType=VARCHAR}, #{content16,jdbcType=VARCHAR}, 
+      #{content17,jdbcType=VARCHAR}, #{content18,jdbcType=VARCHAR}, #{content19,jdbcType=VARCHAR}, 
+      #{content20,jdbcType=VARCHAR}, #{content21,jdbcType=VARCHAR}, #{content22,jdbcType=VARCHAR}, 
+      #{content23,jdbcType=VARCHAR}, #{content24,jdbcType=VARCHAR}, #{content25,jdbcType=VARCHAR}, 
+      #{content26,jdbcType=VARCHAR}, #{content27,jdbcType=VARCHAR}, #{content28,jdbcType=VARCHAR}, 
+      #{content29,jdbcType=VARCHAR}, #{content30,jdbcType=VARCHAR}, #{content31,jdbcType=VARCHAR}, 
+      #{content32,jdbcType=VARCHAR}, #{content33,jdbcType=VARCHAR}, #{content34,jdbcType=VARCHAR}, 
+      #{content35,jdbcType=VARCHAR}, #{content36,jdbcType=VARCHAR}, #{content37,jdbcType=VARCHAR}, 
+      #{content38,jdbcType=VARCHAR}, #{content39,jdbcType=VARCHAR}, #{content40,jdbcType=VARCHAR}, 
+      #{content41,jdbcType=VARCHAR}, #{content42,jdbcType=VARCHAR}, #{content43,jdbcType=VARCHAR}, 
+      #{content44,jdbcType=VARCHAR}, #{content45,jdbcType=VARCHAR}, #{content46,jdbcType=VARCHAR}, 
+      #{content47,jdbcType=VARCHAR}, #{content48,jdbcType=VARCHAR}, #{content49,jdbcType=VARCHAR}, 
+      #{content50,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.fun4g.emailjob.model.TJobContent" >
+    insert into t_job_content
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="jobId != null" >
+        job_id,
+      </if>
+      <if test="email != null" >
+        email,
+      </if>
+      <if test="content2 != null" >
+        content2,
+      </if>
+      <if test="content3 != null" >
+        content3,
+      </if>
+      <if test="content4 != null" >
+        content4,
+      </if>
+      <if test="content5 != null" >
+        content5,
+      </if>
+      <if test="content6 != null" >
+        content6,
+      </if>
+      <if test="content7 != null" >
+        content7,
+      </if>
+      <if test="content8 != null" >
+        content8,
+      </if>
+      <if test="content9 != null" >
+        content9,
+      </if>
+      <if test="content10 != null" >
+        content10,
+      </if>
+      <if test="content11 != null" >
+        content11,
+      </if>
+      <if test="content12 != null" >
+        content12,
+      </if>
+      <if test="content13 != null" >
+        content13,
+      </if>
+      <if test="content14 != null" >
+        content14,
+      </if>
+      <if test="content15 != null" >
+        content15,
+      </if>
+      <if test="content16 != null" >
+        content16,
+      </if>
+      <if test="content17 != null" >
+        content17,
+      </if>
+      <if test="content18 != null" >
+        content18,
+      </if>
+      <if test="content19 != null" >
+        content19,
+      </if>
+      <if test="content20 != null" >
+        content20,
+      </if>
+      <if test="content21 != null" >
+        content21,
+      </if>
+      <if test="content22 != null" >
+        content22,
+      </if>
+      <if test="content23 != null" >
+        content23,
+      </if>
+      <if test="content24 != null" >
+        content24,
+      </if>
+      <if test="content25 != null" >
+        content25,
+      </if>
+      <if test="content26 != null" >
+        content26,
+      </if>
+      <if test="content27 != null" >
+        content27,
+      </if>
+      <if test="content28 != null" >
+        content28,
+      </if>
+      <if test="content29 != null" >
+        content29,
+      </if>
+      <if test="content30 != null" >
+        content30,
+      </if>
+      <if test="content31 != null" >
+        content31,
+      </if>
+      <if test="content32 != null" >
+        content32,
+      </if>
+      <if test="content33 != null" >
+        content33,
+      </if>
+      <if test="content34 != null" >
+        content34,
+      </if>
+      <if test="content35 != null" >
+        content35,
+      </if>
+      <if test="content36 != null" >
+        content36,
+      </if>
+      <if test="content37 != null" >
+        content37,
+      </if>
+      <if test="content38 != null" >
+        content38,
+      </if>
+      <if test="content39 != null" >
+        content39,
+      </if>
+      <if test="content40 != null" >
+        content40,
+      </if>
+      <if test="content41 != null" >
+        content41,
+      </if>
+      <if test="content42 != null" >
+        content42,
+      </if>
+      <if test="content43 != null" >
+        content43,
+      </if>
+      <if test="content44 != null" >
+        content44,
+      </if>
+      <if test="content45 != null" >
+        content45,
+      </if>
+      <if test="content46 != null" >
+        content46,
+      </if>
+      <if test="content47 != null" >
+        content47,
+      </if>
+      <if test="content48 != null" >
+        content48,
+      </if>
+      <if test="content49 != null" >
+        content49,
+      </if>
+      <if test="content50 != null" >
+        content50,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="jobId != null" >
+        #{jobId,jdbcType=INTEGER},
+      </if>
+      <if test="email != null" >
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="content2 != null" >
+        #{content2,jdbcType=VARCHAR},
+      </if>
+      <if test="content3 != null" >
+        #{content3,jdbcType=VARCHAR},
+      </if>
+      <if test="content4 != null" >
+        #{content4,jdbcType=VARCHAR},
+      </if>
+      <if test="content5 != null" >
+        #{content5,jdbcType=VARCHAR},
+      </if>
+      <if test="content6 != null" >
+        #{content6,jdbcType=VARCHAR},
+      </if>
+      <if test="content7 != null" >
+        #{content7,jdbcType=VARCHAR},
+      </if>
+      <if test="content8 != null" >
+        #{content8,jdbcType=VARCHAR},
+      </if>
+      <if test="content9 != null" >
+        #{content9,jdbcType=VARCHAR},
+      </if>
+      <if test="content10 != null" >
+        #{content10,jdbcType=VARCHAR},
+      </if>
+      <if test="content11 != null" >
+        #{content11,jdbcType=VARCHAR},
+      </if>
+      <if test="content12 != null" >
+        #{content12,jdbcType=VARCHAR},
+      </if>
+      <if test="content13 != null" >
+        #{content13,jdbcType=VARCHAR},
+      </if>
+      <if test="content14 != null" >
+        #{content14,jdbcType=VARCHAR},
+      </if>
+      <if test="content15 != null" >
+        #{content15,jdbcType=VARCHAR},
+      </if>
+      <if test="content16 != null" >
+        #{content16,jdbcType=VARCHAR},
+      </if>
+      <if test="content17 != null" >
+        #{content17,jdbcType=VARCHAR},
+      </if>
+      <if test="content18 != null" >
+        #{content18,jdbcType=VARCHAR},
+      </if>
+      <if test="content19 != null" >
+        #{content19,jdbcType=VARCHAR},
+      </if>
+      <if test="content20 != null" >
+        #{content20,jdbcType=VARCHAR},
+      </if>
+      <if test="content21 != null" >
+        #{content21,jdbcType=VARCHAR},
+      </if>
+      <if test="content22 != null" >
+        #{content22,jdbcType=VARCHAR},
+      </if>
+      <if test="content23 != null" >
+        #{content23,jdbcType=VARCHAR},
+      </if>
+      <if test="content24 != null" >
+        #{content24,jdbcType=VARCHAR},
+      </if>
+      <if test="content25 != null" >
+        #{content25,jdbcType=VARCHAR},
+      </if>
+      <if test="content26 != null" >
+        #{content26,jdbcType=VARCHAR},
+      </if>
+      <if test="content27 != null" >
+        #{content27,jdbcType=VARCHAR},
+      </if>
+      <if test="content28 != null" >
+        #{content28,jdbcType=VARCHAR},
+      </if>
+      <if test="content29 != null" >
+        #{content29,jdbcType=VARCHAR},
+      </if>
+      <if test="content30 != null" >
+        #{content30,jdbcType=VARCHAR},
+      </if>
+      <if test="content31 != null" >
+        #{content31,jdbcType=VARCHAR},
+      </if>
+      <if test="content32 != null" >
+        #{content32,jdbcType=VARCHAR},
+      </if>
+      <if test="content33 != null" >
+        #{content33,jdbcType=VARCHAR},
+      </if>
+      <if test="content34 != null" >
+        #{content34,jdbcType=VARCHAR},
+      </if>
+      <if test="content35 != null" >
+        #{content35,jdbcType=VARCHAR},
+      </if>
+      <if test="content36 != null" >
+        #{content36,jdbcType=VARCHAR},
+      </if>
+      <if test="content37 != null" >
+        #{content37,jdbcType=VARCHAR},
+      </if>
+      <if test="content38 != null" >
+        #{content38,jdbcType=VARCHAR},
+      </if>
+      <if test="content39 != null" >
+        #{content39,jdbcType=VARCHAR},
+      </if>
+      <if test="content40 != null" >
+        #{content40,jdbcType=VARCHAR},
+      </if>
+      <if test="content41 != null" >
+        #{content41,jdbcType=VARCHAR},
+      </if>
+      <if test="content42 != null" >
+        #{content42,jdbcType=VARCHAR},
+      </if>
+      <if test="content43 != null" >
+        #{content43,jdbcType=VARCHAR},
+      </if>
+      <if test="content44 != null" >
+        #{content44,jdbcType=VARCHAR},
+      </if>
+      <if test="content45 != null" >
+        #{content45,jdbcType=VARCHAR},
+      </if>
+      <if test="content46 != null" >
+        #{content46,jdbcType=VARCHAR},
+      </if>
+      <if test="content47 != null" >
+        #{content47,jdbcType=VARCHAR},
+      </if>
+      <if test="content48 != null" >
+        #{content48,jdbcType=VARCHAR},
+      </if>
+      <if test="content49 != null" >
+        #{content49,jdbcType=VARCHAR},
+      </if>
+      <if test="content50 != null" >
+        #{content50,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.fun4g.emailjob.model.TJobContent" >
+    update t_job_content
+    <set >
+      <if test="jobId != null" >
+        job_id = #{jobId,jdbcType=INTEGER},
+      </if>
+      <if test="email != null" >
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="content2 != null" >
+        content2 = #{content2,jdbcType=VARCHAR},
+      </if>
+      <if test="content3 != null" >
+        content3 = #{content3,jdbcType=VARCHAR},
+      </if>
+      <if test="content4 != null" >
+        content4 = #{content4,jdbcType=VARCHAR},
+      </if>
+      <if test="content5 != null" >
+        content5 = #{content5,jdbcType=VARCHAR},
+      </if>
+      <if test="content6 != null" >
+        content6 = #{content6,jdbcType=VARCHAR},
+      </if>
+      <if test="content7 != null" >
+        content7 = #{content7,jdbcType=VARCHAR},
+      </if>
+      <if test="content8 != null" >
+        content8 = #{content8,jdbcType=VARCHAR},
+      </if>
+      <if test="content9 != null" >
+        content9 = #{content9,jdbcType=VARCHAR},
+      </if>
+      <if test="content10 != null" >
+        content10 = #{content10,jdbcType=VARCHAR},
+      </if>
+      <if test="content11 != null" >
+        content11 = #{content11,jdbcType=VARCHAR},
+      </if>
+      <if test="content12 != null" >
+        content12 = #{content12,jdbcType=VARCHAR},
+      </if>
+      <if test="content13 != null" >
+        content13 = #{content13,jdbcType=VARCHAR},
+      </if>
+      <if test="content14 != null" >
+        content14 = #{content14,jdbcType=VARCHAR},
+      </if>
+      <if test="content15 != null" >
+        content15 = #{content15,jdbcType=VARCHAR},
+      </if>
+      <if test="content16 != null" >
+        content16 = #{content16,jdbcType=VARCHAR},
+      </if>
+      <if test="content17 != null" >
+        content17 = #{content17,jdbcType=VARCHAR},
+      </if>
+      <if test="content18 != null" >
+        content18 = #{content18,jdbcType=VARCHAR},
+      </if>
+      <if test="content19 != null" >
+        content19 = #{content19,jdbcType=VARCHAR},
+      </if>
+      <if test="content20 != null" >
+        content20 = #{content20,jdbcType=VARCHAR},
+      </if>
+      <if test="content21 != null" >
+        content21 = #{content21,jdbcType=VARCHAR},
+      </if>
+      <if test="content22 != null" >
+        content22 = #{content22,jdbcType=VARCHAR},
+      </if>
+      <if test="content23 != null" >
+        content23 = #{content23,jdbcType=VARCHAR},
+      </if>
+      <if test="content24 != null" >
+        content24 = #{content24,jdbcType=VARCHAR},
+      </if>
+      <if test="content25 != null" >
+        content25 = #{content25,jdbcType=VARCHAR},
+      </if>
+      <if test="content26 != null" >
+        content26 = #{content26,jdbcType=VARCHAR},
+      </if>
+      <if test="content27 != null" >
+        content27 = #{content27,jdbcType=VARCHAR},
+      </if>
+      <if test="content28 != null" >
+        content28 = #{content28,jdbcType=VARCHAR},
+      </if>
+      <if test="content29 != null" >
+        content29 = #{content29,jdbcType=VARCHAR},
+      </if>
+      <if test="content30 != null" >
+        content30 = #{content30,jdbcType=VARCHAR},
+      </if>
+      <if test="content31 != null" >
+        content31 = #{content31,jdbcType=VARCHAR},
+      </if>
+      <if test="content32 != null" >
+        content32 = #{content32,jdbcType=VARCHAR},
+      </if>
+      <if test="content33 != null" >
+        content33 = #{content33,jdbcType=VARCHAR},
+      </if>
+      <if test="content34 != null" >
+        content34 = #{content34,jdbcType=VARCHAR},
+      </if>
+      <if test="content35 != null" >
+        content35 = #{content35,jdbcType=VARCHAR},
+      </if>
+      <if test="content36 != null" >
+        content36 = #{content36,jdbcType=VARCHAR},
+      </if>
+      <if test="content37 != null" >
+        content37 = #{content37,jdbcType=VARCHAR},
+      </if>
+      <if test="content38 != null" >
+        content38 = #{content38,jdbcType=VARCHAR},
+      </if>
+      <if test="content39 != null" >
+        content39 = #{content39,jdbcType=VARCHAR},
+      </if>
+      <if test="content40 != null" >
+        content40 = #{content40,jdbcType=VARCHAR},
+      </if>
+      <if test="content41 != null" >
+        content41 = #{content41,jdbcType=VARCHAR},
+      </if>
+      <if test="content42 != null" >
+        content42 = #{content42,jdbcType=VARCHAR},
+      </if>
+      <if test="content43 != null" >
+        content43 = #{content43,jdbcType=VARCHAR},
+      </if>
+      <if test="content44 != null" >
+        content44 = #{content44,jdbcType=VARCHAR},
+      </if>
+      <if test="content45 != null" >
+        content45 = #{content45,jdbcType=VARCHAR},
+      </if>
+      <if test="content46 != null" >
+        content46 = #{content46,jdbcType=VARCHAR},
+      </if>
+      <if test="content47 != null" >
+        content47 = #{content47,jdbcType=VARCHAR},
+      </if>
+      <if test="content48 != null" >
+        content48 = #{content48,jdbcType=VARCHAR},
+      </if>
+      <if test="content49 != null" >
+        content49 = #{content49,jdbcType=VARCHAR},
+      </if>
+      <if test="content50 != null" >
+        content50 = #{content50,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.fun4g.emailjob.model.TJobContent" >
+    update t_job_content
+    set job_id = #{jobId,jdbcType=INTEGER},
+      email = #{email,jdbcType=VARCHAR},
+      content2 = #{content2,jdbcType=VARCHAR},
+      content3 = #{content3,jdbcType=VARCHAR},
+      content4 = #{content4,jdbcType=VARCHAR},
+      content5 = #{content5,jdbcType=VARCHAR},
+      content6 = #{content6,jdbcType=VARCHAR},
+      content7 = #{content7,jdbcType=VARCHAR},
+      content8 = #{content8,jdbcType=VARCHAR},
+      content9 = #{content9,jdbcType=VARCHAR},
+      content10 = #{content10,jdbcType=VARCHAR},
+      content11 = #{content11,jdbcType=VARCHAR},
+      content12 = #{content12,jdbcType=VARCHAR},
+      content13 = #{content13,jdbcType=VARCHAR},
+      content14 = #{content14,jdbcType=VARCHAR},
+      content15 = #{content15,jdbcType=VARCHAR},
+      content16 = #{content16,jdbcType=VARCHAR},
+      content17 = #{content17,jdbcType=VARCHAR},
+      content18 = #{content18,jdbcType=VARCHAR},
+      content19 = #{content19,jdbcType=VARCHAR},
+      content20 = #{content20,jdbcType=VARCHAR},
+      content21 = #{content21,jdbcType=VARCHAR},
+      content22 = #{content22,jdbcType=VARCHAR},
+      content23 = #{content23,jdbcType=VARCHAR},
+      content24 = #{content24,jdbcType=VARCHAR},
+      content25 = #{content25,jdbcType=VARCHAR},
+      content26 = #{content26,jdbcType=VARCHAR},
+      content27 = #{content27,jdbcType=VARCHAR},
+      content28 = #{content28,jdbcType=VARCHAR},
+      content29 = #{content29,jdbcType=VARCHAR},
+      content30 = #{content30,jdbcType=VARCHAR},
+      content31 = #{content31,jdbcType=VARCHAR},
+      content32 = #{content32,jdbcType=VARCHAR},
+      content33 = #{content33,jdbcType=VARCHAR},
+      content34 = #{content34,jdbcType=VARCHAR},
+      content35 = #{content35,jdbcType=VARCHAR},
+      content36 = #{content36,jdbcType=VARCHAR},
+      content37 = #{content37,jdbcType=VARCHAR},
+      content38 = #{content38,jdbcType=VARCHAR},
+      content39 = #{content39,jdbcType=VARCHAR},
+      content40 = #{content40,jdbcType=VARCHAR},
+      content41 = #{content41,jdbcType=VARCHAR},
+      content42 = #{content42,jdbcType=VARCHAR},
+      content43 = #{content43,jdbcType=VARCHAR},
+      content44 = #{content44,jdbcType=VARCHAR},
+      content45 = #{content45,jdbcType=VARCHAR},
+      content46 = #{content46,jdbcType=VARCHAR},
+      content47 = #{content47,jdbcType=VARCHAR},
+      content48 = #{content48,jdbcType=VARCHAR},
+      content49 = #{content49,jdbcType=VARCHAR},
+      content50 = #{content50,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
