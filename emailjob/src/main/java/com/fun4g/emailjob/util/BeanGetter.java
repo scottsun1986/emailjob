@@ -1,7 +1,6 @@
 package com.fun4g.emailjob.util;
 
 
-
 import com.fun4g.emailjob.iDao.TUserMapper;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -28,15 +27,16 @@ public class BeanGetter {
             return false;
 
         }
+
+
     }
 
     public static void main(String[] args) throws FileNotFoundException, SQLException {
         //System.out.println(MyConfig.getManagersWithoutNull().size());
 
 
-
 //
- TUserMapper fm = (TUserMapper) BeanGetter.getBean("tUserMapper");
+        TUserMapper fm = (TUserMapper) BeanGetter.getBean("tUserMapper");
 
         System.out.println(fm.selectByPrimaryKey("nj4690").getName());
 
@@ -46,8 +46,8 @@ public class BeanGetter {
 //        d.setJobComment("我爱中国");
 //        System.out.println(fm.insert(d));
 
-    //    IuserMapper iuserMapper=(IuserMapper) BeanGetter.getBean("iuserMapper");
-     //   System.out.println(iuserMapper.selectAllValid().get(0).getName());
+        //    IuserMapper iuserMapper=(IuserMapper) BeanGetter.getBean("iuserMapper");
+        //   System.out.println(iuserMapper.selectAllValid().get(0).getName());
 //        System.out.println(tempUser.getName());
 
         //   String xx=HttpRequest.sendPost("https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx45b6ea3d9f9eb681&secret=87ea9c1da65bb7518a809ad473b6445d&code=041jks470McG5u1XlL170uZq470jks4L&grant_type=authorization_code","");
